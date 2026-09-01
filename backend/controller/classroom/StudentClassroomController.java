@@ -1,7 +1,7 @@
 package com.kauanrodrigues.backend.controller.classroom;
 
 import com.kauanrodrigues.backend.dto.classroom.ClassroomResponseDto;
-import com.kauanrodrigues.backend.dto.classroom.student.StudentJoinClassroomDto;
+import com.kauanrodrigues.backend.dto.classroom.StudentJoinClassroomDto;
 import com.kauanrodrigues.backend.service.StudentClassroomService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

@@ -1,8 +1,8 @@
 package com.kauanrodrigues.backend.controller.user;
 
-import com.kauanrodrigues.backend.dto.user.admin.UserPasswordPatchDto;
-import com.kauanrodrigues.backend.dto.user.admin.UserPatchDto;
-import com.kauanrodrigues.backend.dto.user.admin.UserResponseDto;
+import com.kauanrodrigues.backend.dto.user.UserPasswordPatchDto;
+import com.kauanrodrigues.backend.dto.user.UserPatchDto;
+import com.kauanrodrigues.backend.dto.user.UserResponseDto;
 import com.kauanrodrigues.backend.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

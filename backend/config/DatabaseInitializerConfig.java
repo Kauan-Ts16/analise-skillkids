@@ -1,6 +1,6 @@
 package com.kauanrodrigues.backend.config;
 
-import com.kauanrodrigues.backend.dto.user.admin.UserPostDto;
+import com.kauanrodrigues.backend.dto.user.UserPostDto;
 import com.kauanrodrigues.backend.enums.RoleName;
 import com.kauanrodrigues.backend.model.RoleModel;
 import com.kauanrodrigues.backend.repository.RoleRepository;

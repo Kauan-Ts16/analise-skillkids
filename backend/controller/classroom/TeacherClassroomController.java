@@ -1,8 +1,8 @@
 package com.kauanrodrigues.backend.controller.classroom;
 
 import com.kauanrodrigues.backend.dto.classroom.ClassroomResponseDto;
-import com.kauanrodrigues.backend.dto.classroom.teacher.TeacherClassroomPostDto;
-import com.kauanrodrigues.backend.dto.user.teacher.TeacherStudentResponseDto;
+import com.kauanrodrigues.backend.dto.classroom.TeacherClassroomPostDto;
+import com.kauanrodrigues.backend.dto.user.TeacherStudentResponseDto;
 import com.kauanrodrigues.backend.service.TeacherClassroomService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

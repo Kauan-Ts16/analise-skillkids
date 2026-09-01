@@ -3,7 +3,7 @@ package com.kauanrodrigues.backend.controller.user;
 import com.kauanrodrigues.backend.dto.auth.LoginPostDto;
 import com.kauanrodrigues.backend.dto.auth.LoginResponseDto;
 import com.kauanrodrigues.backend.dto.auth.RegisterPostDto;
-import com.kauanrodrigues.backend.dto.user.admin.UserResponseDto;
+import com.kauanrodrigues.backend.dto.user.UserResponseDto;
 import com.kauanrodrigues.backend.service.AuthService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

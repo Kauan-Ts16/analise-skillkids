@@ -1,13 +1,14 @@
 package com.kauanrodrigues.backend.service;
 
 import com.kauanrodrigues.backend.dto.classroom.ClassroomResponseDto;
-import com.kauanrodrigues.backend.dto.classroom.student.StudentJoinClassroomDto;
+import com.kauanrodrigues.backend.dto.classroom.StudentJoinClassroomDto;
 import com.kauanrodrigues.backend.exception.ExceptionGeneric;
 import com.kauanrodrigues.backend.mapper.ClassroomMapper;
 import com.kauanrodrigues.backend.model.ClassroomModel;
 import com.kauanrodrigues.backend.model.UserModel;
 import com.kauanrodrigues.backend.repository.ClassroomRepository;
 import com.kauanrodrigues.backend.repository.UserRepository;
+import com.kauanrodrigues.backend.security.CurrentUserService;
 import com.kauanrodrigues.backend.validation.user.UserValidator;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -26,14 +27,14 @@ public class StudentClassroomService {
 
     private final UserService userService;
 
-    private final CurrentService currentService;
+    private final CurrentUserService currentUserService;
 
     private final UserValidator userValidator;
 
 
     @Transactional
     public ClassroomResponseDto join(StudentJoinClassroomDto dto) {
-        UUID studentId = currentService.getCurrentUserId();
+        UUID studentId = currentUserService.getCurrentUserId();
 
         UserModel student = userService.findModelByIdAndActive(studentId, true);
 
@@ -53,8 +54,9 @@ public class StudentClassroomService {
         return ClassroomMapper.toResponse(classroom);
     }
 
+    @Transactional
     public void leave() {
-        UUID studentId = currentService.getCurrentUserId();
+        UUID studentId = currentUserService.getCurrentUserId();
 
         UserModel student = userService.findModelByIdAndActive(studentId, true);
 
@@ -68,7 +70,7 @@ public class StudentClassroomService {
     }
 
     public ClassroomResponseDto findCurrentClassroom() {
-        UUID studentId = currentService.getCurrentUserId();
+        UUID studentId = currentUserService.getCurrentUserId();
 
         UserModel student = userService.findModelByIdAndActive(studentId, true);
 

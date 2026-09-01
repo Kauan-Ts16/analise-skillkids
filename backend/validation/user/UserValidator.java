@@ -1,8 +1,8 @@
 package com.kauanrodrigues.backend.validation.user;
 
-import com.kauanrodrigues.backend.dto.user.admin.UserPasswordPatchDto;
-import com.kauanrodrigues.backend.dto.user.admin.UserPatchDto;
-import com.kauanrodrigues.backend.dto.user.admin.UserPostDto;
+import com.kauanrodrigues.backend.dto.user.UserPasswordPatchDto;
+import com.kauanrodrigues.backend.dto.user.UserPatchDto;
+import com.kauanrodrigues.backend.dto.user.UserPostDto;
 import com.kauanrodrigues.backend.enums.RoleName;
 import com.kauanrodrigues.backend.exception.ExceptionGeneric;
 import com.kauanrodrigues.backend.model.UserModel;

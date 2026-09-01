@@ -1,8 +1,8 @@
 package com.kauanrodrigues.backend.validation.classroom;
 
-import com.kauanrodrigues.backend.dto.classroom.admin.ClassroomPatchDto;
-import com.kauanrodrigues.backend.dto.classroom.admin.ClassroomPostDto;
-import com.kauanrodrigues.backend.dto.classroom.teacher.TeacherClassroomPostDto;
+import com.kauanrodrigues.backend.dto.classroom.ClassroomPatchDto;
+import com.kauanrodrigues.backend.dto.classroom.ClassroomPostDto;
+import com.kauanrodrigues.backend.dto.classroom.TeacherClassroomPostDto;
 import com.kauanrodrigues.backend.enums.RoleName;
 import com.kauanrodrigues.backend.exception.ExceptionGeneric;
 import com.kauanrodrigues.backend.model.ClassroomModel;

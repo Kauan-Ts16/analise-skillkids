@@ -1,9 +1,9 @@
 package com.kauanrodrigues.backend.service;
 
 import com.kauanrodrigues.backend.dto.classroom.*;
-import com.kauanrodrigues.backend.dto.classroom.admin.ClassroomPatchDto;
-import com.kauanrodrigues.backend.dto.classroom.admin.ClassroomPostDto;
-import com.kauanrodrigues.backend.dto.classroom.admin.TeacherPatchDto;
+import com.kauanrodrigues.backend.dto.classroom.ClassroomPatchDto;
+import com.kauanrodrigues.backend.dto.classroom.ClassroomPostDto;
+import com.kauanrodrigues.backend.dto.classroom.TeacherPatchDto;
 import com.kauanrodrigues.backend.exception.ExceptionGeneric;
 import com.kauanrodrigues.backend.mapper.ClassroomMapper;
 import com.kauanrodrigues.backend.model.ClassroomModel;

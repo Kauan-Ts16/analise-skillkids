@@ -1,9 +1,9 @@
 package com.kauanrodrigues.backend.mapper;
 
-import com.kauanrodrigues.backend.dto.user.admin.UserPatchDto;
-import com.kauanrodrigues.backend.dto.user.admin.UserPostDto;
-import com.kauanrodrigues.backend.dto.user.admin.UserResponseDto;
-import com.kauanrodrigues.backend.dto.user.teacher.TeacherStudentResponseDto;
+import com.kauanrodrigues.backend.dto.user.UserPatchDto;
+import com.kauanrodrigues.backend.dto.user.UserPostDto;
+import com.kauanrodrigues.backend.dto.user.UserResponseDto;
+import com.kauanrodrigues.backend.dto.user.TeacherStudentResponseDto;
 import com.kauanrodrigues.backend.model.ClassroomModel;
 import com.kauanrodrigues.backend.model.UserModel;
 

@@ -1,8 +1,8 @@
 package com.kauanrodrigues.backend.service;
 
 import com.kauanrodrigues.backend.dto.classroom.ClassroomResponseDto;
-import com.kauanrodrigues.backend.dto.classroom.teacher.TeacherClassroomPostDto;
-import com.kauanrodrigues.backend.dto.user.teacher.TeacherStudentResponseDto;
+import com.kauanrodrigues.backend.dto.classroom.TeacherClassroomPostDto;
+import com.kauanrodrigues.backend.dto.user.TeacherStudentResponseDto;
 import com.kauanrodrigues.backend.enums.RoleName;
 import com.kauanrodrigues.backend.exception.ExceptionGeneric;
 import com.kauanrodrigues.backend.mapper.ClassroomMapper;
@@ -11,6 +11,7 @@ import com.kauanrodrigues.backend.model.ClassroomModel;
 import com.kauanrodrigues.backend.model.UserModel;
 import com.kauanrodrigues.backend.repository.ClassroomRepository;
 import com.kauanrodrigues.backend.repository.UserRepository;
+import com.kauanrodrigues.backend.security.CurrentUserService;
 import com.kauanrodrigues.backend.validation.classroom.ClassroomValidator;
 import com.kauanrodrigues.backend.validation.user.UserValidator;
 import jakarta.transaction.Transactional;
@@ -35,13 +36,13 @@ public class TeacherClassroomService {
 
     private final UserService userService;
 
-    private final CurrentService currentService;
+    private final CurrentUserService currentUserService;
 
     private final ClassroomJoinCodeService joinCodeService;
 
     @Transactional
     public ClassroomResponseDto save(TeacherClassroomPostDto dto) {
-        UUID teacherId = currentService.getCurrentUserId();
+        UUID teacherId = currentUserService.getCurrentUserId();
 
         UserModel teacher = userService.findModelByIdAndActive(teacherId, true);
 
@@ -88,7 +89,7 @@ public class TeacherClassroomService {
     }
 
     public List<ClassroomResponseDto> findAll() {
-        UUID teacherId = currentService.getCurrentUserId();
+        UUID teacherId = currentUserService.getCurrentUserId();
 
         return classroomRepository
                 .findAllByTeacher_IdAndActive(teacherId, true)
@@ -118,7 +119,7 @@ public class TeacherClassroomService {
     }
 
     private ClassroomModel findModelById(UUID classroomId) {
-        UUID teacherId = currentService.getCurrentUserId();
+        UUID teacherId = currentUserService.getCurrentUserId();
 
         return classroomRepository.findByIdAndTeacher_IdAndActive(classroomId, teacherId, true)
                 .orElseThrow(() -> new ExceptionGeneric("Classroom not found!", "No active classroom found for the authenticated teacher with id: " + classroomId, HttpStatus.NOT_FOUND));

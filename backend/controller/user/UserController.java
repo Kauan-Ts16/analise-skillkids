@@ -1,6 +1,6 @@
 package com.kauanrodrigues.backend.controller.user;
 
-import com.kauanrodrigues.backend.dto.user.admin.*;
+import com.kauanrodrigues.backend.dto.user.*;
 import com.kauanrodrigues.backend.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

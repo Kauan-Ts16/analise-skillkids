@@ -1,6 +1,6 @@
 package com.kauanrodrigues.backend.service;
 
-import com.kauanrodrigues.backend.dto.user.admin.*;
+import com.kauanrodrigues.backend.dto.user.*;
 import com.kauanrodrigues.backend.enums.RoleName;
 import com.kauanrodrigues.backend.exception.ExceptionGeneric;
 import com.kauanrodrigues.backend.mapper.UserMapper;
